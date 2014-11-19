@@ -53,7 +53,7 @@
 
 -(void) setGameMode
 {
-    [self.game cardsMatchNumber:[self.gameModeControl selectedSegmentIndex] + 2];
+    [self.game cardsMatchNumber:[self.gameModeControl selectedSegmentIndex]];
 }
 
 - (IBAction)setGameModeAction:(UISegmentedControl *)sender

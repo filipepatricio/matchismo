@@ -68,26 +68,30 @@ static const int BONUS_MATCH = 4;
         if(card.isChosen){
             card.chosen = false;
         }else{
+            //create a new chosen cards Array
+            self.chosenCards = nil;
+            
             //match against other chosen cards
             for(Card *otherCard in self.cards){
                 if (otherCard.isChosen && !otherCard.isMatched){
-                    [self.chosenCards addObject:card];
-                    if([self.chosenCards count] == self.matchNumber-1){
-                        int matchScore = [card match:self.chosenCards];
-                        if(matchScore){
-                            self.score += BONUS_MATCH * matchScore;
-                            [self matchChosenCards];
-                            card.matched = true;
-                        }else{
-                            self.score -= MISMATCH_PENALTY;
-                            [self clearChosenCards];
-                        }
-                        self.chosenCards = nil;
-                    }
-                        
-                    break;
+                    //add chosen card
+                    [self.chosenCards addObject:otherCard];
                 }
             }
+            
+            if([self.chosenCards count] == (self.matchNumber+1)){
+                int matchScore = [card match:self.chosenCards];
+                if(matchScore){
+                    self.score += BONUS_MATCH * matchScore;
+                    [self matchChosenCards];
+                    card.matched = true;
+                }else{
+                    self.score -= MISMATCH_PENALTY;
+                    [self clearChosenCards];
+                }
+            }
+            
+            
             self.score -= CHOSEN_PENALTY;
             card.chosen = true;
 
