@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic)Deck *deck;
+@property (weak, nonatomic) IBOutlet UILabel *eventsLabel;
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
 
@@ -77,6 +78,7 @@
         [cardButton setBackgroundImage:[self imageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+        self.eventsLabel.text = [[self.game eventsArray] lastObject];
     }
 }
 

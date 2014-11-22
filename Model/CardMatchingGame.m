@@ -13,6 +13,7 @@
 @property (nonatomic, strong)NSMutableArray *cards; //of Card
 @property (nonatomic)NSUInteger matchNumber;
 @property (nonatomic, strong)NSMutableArray *chosenCards;
+@property (nonatomic, readwrite, strong)NSMutableArray *eventsArray; //of Strings
 @end
 
 @implementation CardMatchingGame
@@ -29,6 +30,11 @@
     // Lazy instantiation!
     if(!_chosenCards) _chosenCards = [[NSMutableArray alloc] init];
     return _chosenCards;
+}
+-(NSMutableArray *)eventsArray
+{
+    if(!_eventsArray) _eventsArray = [[NSMutableArray alloc] init];
+    return _eventsArray;
 }
 
 -(instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
@@ -67,6 +73,7 @@ static const int BONUS_MATCH = 4;
     if(!card.isMatched){
         if(card.isChosen){
             card.chosen = false;
+            [self.eventsArray addObject:[NSString stringWithFormat:@"%@ Unpicked", card.contents]];
         }else{
             //create a new chosen cards Array
             self.chosenCards = nil;
@@ -79,6 +86,7 @@ static const int BONUS_MATCH = 4;
                 }
             }
             
+            //self.matchNumber + 1 because of SegmentControlUI
             if([self.chosenCards count] == (self.matchNumber+1)){
                 int matchScore = [card match:self.chosenCards];
                 if(matchScore){
@@ -89,6 +97,9 @@ static const int BONUS_MATCH = 4;
                     self.score -= MISMATCH_PENALTY;
                     [self clearChosenCards];
                 }
+                
+            }else{
+                [self.eventsArray addObject:[NSString stringWithFormat:@"%@ Picked", card.contents]];
             }
             
             

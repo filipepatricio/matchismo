@@ -19,5 +19,5 @@
 -(void)cardsMatchNumber:(NSUInteger)number;
 
 @property (nonatomic, readonly) NSInteger score;
-
+@property (nonatomic, readonly, strong) NSMutableArray *eventsArray;
 @end

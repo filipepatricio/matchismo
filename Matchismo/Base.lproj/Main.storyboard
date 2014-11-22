@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -219,6 +219,15 @@
                                     <action selector="setGameModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="zr3-a2-Cxc"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EventsLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRx-E2-EdT">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="483" width="288" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -242,6 +251,7 @@
                                 <exclude reference="EUY-sQ-MMK"/>
                                 <exclude reference="53B-ZM-c24"/>
                                 <exclude reference="Og8-hh-Gv7"/>
+                                <exclude reference="gRx-E2-EdT"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Edh-AD-lbr"/>
@@ -265,6 +275,7 @@
                                 <include reference="EUY-sQ-MMK"/>
                                 <include reference="53B-ZM-c24"/>
                                 <include reference="Og8-hh-Gv7"/>
+                                <include reference="gRx-E2-EdT"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Edh-AD-lbr"/>
@@ -274,6 +285,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="eventsLabel" destination="gRx-E2-EdT" id="mIP-WX-dyo"/>
                         <outlet property="gameModeControl" destination="Og8-hh-Gv7" id="ib7-7c-pj4"/>
                         <outlet property="scoreLabel" destination="EUY-sQ-MMK" id="THn-9W-jyn"/>
                         <outletCollection property="cardButtons" destination="6xu-rL-M8C" id="qVn-qs-yHk"/>

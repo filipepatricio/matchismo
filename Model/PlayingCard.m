@@ -13,6 +13,7 @@
 -(int)match:(NSArray *)otherCards
 {
     int score = 0;
+    int totalCards = [otherCards count] + 1;
     
 //    if([otherCards count]==1)
 //    {
@@ -24,13 +25,37 @@
 //        }
 //    }
     
-    for(int i = 0; i<[otherCards count]; i++){
-        PlayingCard *otherCard = otherCards[i];
-        if([self.suit isEqualToString: otherCard.suit]){
-            score += 1;
-        }else if (self.rank == otherCard.rank){
-            score += 4;
+    unsigned int noMatchCounter = 0;
+    
+    NSMutableArray *matchedCards = [[NSMutableArray alloc] initWithArray:otherCards]; //of PlayingCards
+    [matchedCards addObject:self];
+    
+    while([matchedCards count] > 0){
+        PlayingCard *actualCard = [matchedCards lastObject];
+        [matchedCards removeLastObject];
+        for(int i = 0; i<[matchedCards count]; i++){
+            PlayingCard *otherCard = matchedCards[i];
+            if([actualCard.suit isEqualToString: otherCard.suit]){
+                score += 1;
+            }else if (actualCard.rank == otherCard.rank){
+                score += 4;
+            }else{
+                //no match
+                noMatchCounter++;
+            }
         }
+    }
+    
+    if(noMatchCounter == 0){
+        //if matchedCards number == otherCards number - means is a full match and has a 3 point Bonus
+        NSLog(@"ALL MATCH - 3point bonus");
+        score += 3;
+    }
+    else if(noMatchCounter < totalCards && noMatchCounter > 0){
+        NSLog(@"%d match in %d cards", totalCards - noMatchCounter, totalCards);
+    }else if(noMatchCounter == totalCards ){
+        //no matched cards
+        NSLog(@"NO MATCH");
     }
     
     return score;
