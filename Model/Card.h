@@ -15,6 +15,8 @@
 @property (nonatomic, getter=isChosen) BOOL chosen;
 @property (nonatomic, getter=isMatched) BOOL matched;
 
+@property (nonatomic, strong) NSMutableArray *eventHistory;
+
 -(int)match:(NSArray *)otherCards;
 
 @end

@@ -10,7 +10,6 @@
 
 @interface Card()
 
-
 @end
 
 @implementation Card
