@@ -86,6 +86,7 @@ static const int BONUS_MATCH = 4;
                 }
             }
             
+            [self.eventsArray addObject:[NSString stringWithFormat:@"%@ Picked", card.contents]];
             //self.matchNumber + 1 because of SegmentControlUI
             if([self.chosenCards count] == (self.matchNumber+1)){
                 int matchScore = [card match:self.chosenCards];
@@ -97,9 +98,7 @@ static const int BONUS_MATCH = 4;
                     self.score -= MISMATCH_PENALTY;
                     [self clearChosenCards];
                 }
-                
-            }else{
-                [self.eventsArray addObject:[NSString stringWithFormat:@"%@ Picked", card.contents]];
+                [self.eventsArray addObjectsFromArray:card.eventHistory];
             }
             
             

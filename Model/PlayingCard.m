@@ -8,12 +8,21 @@
 
 #import "PlayingCard.h"
 
+@interface PlayingCard()
+@property (nonatomic, strong) NSMutableArray *eventHistory;
+@end
+
 @implementation PlayingCard
 
+
+static const int SUIT_MATCH_POINT = 1;
+static const int RANK_MATCH_POINT = 4;
 -(int)match:(NSArray *)otherCards
 {
     int score = 0;
     int totalCards = [otherCards count] + 1;
+    
+    NSMutableArray *eventHistory = [[NSMutableArray alloc] init];
     
 //    if([otherCards count]==1)
 //    {
@@ -36,9 +45,11 @@
         for(int i = 0; i<[matchedCards count]; i++){
             PlayingCard *otherCard = matchedCards[i];
             if([actualCard.suit isEqualToString: otherCard.suit]){
-                score += 1;
+                score += SUIT_MATCH_POINT;
+                [eventHistory addObject:[NSString stringWithFormat:@"%@ match with %@ for %d points", actualCard.contents, otherCard.contents, SUIT_MATCH_POINT]];
             }else if (actualCard.rank == otherCard.rank){
-                score += 4;
+                score += RANK_MATCH_POINT;
+                [eventHistory addObject:[NSString stringWithFormat:@"%@ match with %@ for %d points", actualCard.contents, otherCard.contents, RANK_MATCH_POINT]];
             }else{
                 //no match
                 noMatchCounter++;
@@ -48,15 +59,17 @@
     
     if(noMatchCounter == 0){
         //if matchedCards number == otherCards number - means is a full match and has a 3 point Bonus
-        NSLog(@"ALL MATCH - 3point bonus");
+        [eventHistory addObject: @"ALL MATCH - 3 point bonus"];
         score += 3;
     }
     else if(noMatchCounter < totalCards && noMatchCounter > 0){
-        NSLog(@"%d match in %d cards", totalCards - noMatchCounter, totalCards);
+        [eventHistory addObject: [NSString stringWithFormat:@"%d match in %d cards", totalCards - noMatchCounter, totalCards]];
     }else if(noMatchCounter == totalCards ){
         //no matched cards
-        NSLog(@"NO MATCH");
+        [eventHistory addObject: @"NO MATCH"];
     }
+    
+    self.eventHistory = eventHistory;
     
     return score;
 }
