@@ -39,28 +39,26 @@ static const int RANK_MATCH_POINT = 4;
     NSMutableArray *matchedCards = [[NSMutableArray alloc] initWithArray:otherCards]; //of PlayingCards
     [matchedCards addObject:self];
     
-    while([matchedCards count] > 0){
-        id card = [matchedCards lastObject];
-        if([card isKindOfClass:[PlayingCard class]])
-        {
-            PlayingCard *actualCard = (PlayingCard *) card;
-            [matchedCards removeLastObject];
-            for(int i = 0; i<[matchedCards count]; i++){
-                PlayingCard *otherCard = matchedCards[i];
-                if([actualCard.suit isEqualToString: otherCard.suit]){
-                    score += SUIT_MATCH_POINT;
-                    [eventHistory addObject:[NSString stringWithFormat:@"%@ match with %@ for %d points", actualCard.contents, otherCard.contents, SUIT_MATCH_POINT]];
-                }else if (actualCard.rank == otherCard.rank){
-                    score += RANK_MATCH_POINT;
-                    [eventHistory addObject:[NSString stringWithFormat:@"%@ match with %@ for %d points", actualCard.contents, otherCard.contents, RANK_MATCH_POINT]];
-                }else{
-                    //no match
-                    noMatchCounter++;
-                }
+    id card = [matchedCards lastObject];
+    if([card isKindOfClass:[PlayingCard class]])
+    {
+        PlayingCard *actualCard = (PlayingCard *) card;
+        [matchedCards removeLastObject];
+        for(int i = 0; i<[matchedCards count]; i++){
+            PlayingCard *otherCard = matchedCards[i];
+            if([actualCard.suit isEqualToString: otherCard.suit]){
+                score += SUIT_MATCH_POINT;
+                [eventHistory addObject:[NSString stringWithFormat:@"%@ match with %@ for %d points", actualCard.contents, otherCard.contents, SUIT_MATCH_POINT]];
+            }else if (actualCard.rank == otherCard.rank){
+                score += RANK_MATCH_POINT;
+                [eventHistory addObject:[NSString stringWithFormat:@"%@ match with %@ for %d points", actualCard.contents, otherCard.contents, RANK_MATCH_POINT]];
+            }else{
+                //no match
+                noMatchCounter++;
             }
         }
     }
-    
+
     if(noMatchCounter == 0){
         //if matchedCards number == otherCards number - means is a full match and has a 3 point Bonus
         [eventHistory addObject: @"ALL MATCH - 3 point bonus"];
