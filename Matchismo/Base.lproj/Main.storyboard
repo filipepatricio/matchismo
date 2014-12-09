@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YD0-dA-Ov6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cards-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Cards" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="20" width="40" height="60"/>
+                                    <rect key="frame" x="16" y="41" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ES1-ty-vPR"/>
@@ -40,7 +40,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="20" width="40" height="60"/>
+                                    <rect key="frame" x="64" y="41" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFj-kI-0Ag"/>
@@ -54,7 +54,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="20" width="40" height="60"/>
+                                    <rect key="frame" x="112" y="41" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tra-Ul-yno"/>
@@ -68,7 +68,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="20" width="40" height="60"/>
+                                    <rect key="frame" x="160" y="41" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oEm-BG-9RL"/>
@@ -88,7 +88,7 @@
                                     <segment title="3-card-match"/>
                                 </segments>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="409" width="280" height="29"/>
+                                    <rect key="frame" x="16" y="419" width="280" height="29"/>
                                 </variation>
                                 <connections>
                                     <action selector="setGameModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="zr3-a2-Cxc"/>
@@ -100,18 +100,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="483" width="288" height="21"/>
+                                    <rect key="frame" x="16" y="493" width="288" height="21"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IGW-ZU-PCv">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="445" width="284" height="31"/>
-                                </variation>
-                                <connections>
-                                    <action selector="eventChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lad-Pe-DJy"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-CU-64A">
                                 <rect key="frame" x="16" y="20" width="76" height="116"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -120,7 +111,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="20" width="40" height="60"/>
+                                    <rect key="frame" x="208" y="41" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nkP-Ke-FeQ"/>
@@ -134,7 +125,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="20" width="40" height="60"/>
+                                    <rect key="frame" x="256" y="41" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vI3-WY-qjE"/>
@@ -148,7 +139,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="88" width="40" height="60"/>
+                                    <rect key="frame" x="16" y="109" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5Z-eT-14L"/>
@@ -162,7 +153,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="88" width="40" height="60"/>
+                                    <rect key="frame" x="64" y="109" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFH-aU-aRl"/>
@@ -176,7 +167,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="88" width="40" height="60"/>
+                                    <rect key="frame" x="112" y="109" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1e-EA-FAv"/>
@@ -190,7 +181,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="88" width="40" height="60"/>
+                                    <rect key="frame" x="160" y="109" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yMB-7l-Q2a"/>
@@ -204,7 +195,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="88" width="40" height="60"/>
+                                    <rect key="frame" x="208" y="109" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjq-xj-sNa"/>
@@ -218,7 +209,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="88" width="40" height="60"/>
+                                    <rect key="frame" x="256" y="109" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hnv-jS-8FU"/>
@@ -232,7 +223,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="156" width="40" height="60"/>
+                                    <rect key="frame" x="16" y="177" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kV5-bG-OdC"/>
@@ -246,7 +237,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="156" width="40" height="60"/>
+                                    <rect key="frame" x="64" y="177" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8P-Od-kgP"/>
@@ -260,7 +251,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="156" width="40" height="60"/>
+                                    <rect key="frame" x="112" y="177" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bc2-mC-Ppo"/>
@@ -274,7 +265,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="156" width="40" height="60"/>
+                                    <rect key="frame" x="160" y="177" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dt-P2-8hV"/>
@@ -288,7 +279,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="156" width="40" height="60"/>
+                                    <rect key="frame" x="208" y="177" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kyw-a2-wbQ"/>
@@ -302,7 +293,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="156" width="40" height="60"/>
+                                    <rect key="frame" x="256" y="177" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v54-xd-4Sz"/>
@@ -316,7 +307,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="224" width="40" height="60"/>
+                                    <rect key="frame" x="16" y="245" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vby-0g-INe"/>
@@ -330,7 +321,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="224" width="40" height="60"/>
+                                    <rect key="frame" x="64" y="245" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AF3-9Z-SUU"/>
@@ -344,7 +335,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="224" width="40" height="60"/>
+                                    <rect key="frame" x="112" y="245" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oK-sB-4VU"/>
@@ -358,7 +349,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="224" width="40" height="60"/>
+                                    <rect key="frame" x="160" y="245" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtn-36-Cpz"/>
@@ -372,7 +363,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="224" width="40" height="60"/>
+                                    <rect key="frame" x="208" y="245" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2z-Pr-FQB"/>
@@ -386,7 +377,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="224" width="40" height="60"/>
+                                    <rect key="frame" x="256" y="245" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1f-6T-osI"/>
@@ -400,7 +391,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="292" width="40" height="60"/>
+                                    <rect key="frame" x="16" y="313" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koN-10-r7d"/>
@@ -414,7 +405,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="292" width="40" height="60"/>
+                                    <rect key="frame" x="64" y="313" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6Q-sQ-G4J"/>
@@ -428,7 +419,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="292" width="40" height="60"/>
+                                    <rect key="frame" x="112" y="313" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wC1-E2-vKz"/>
@@ -442,7 +433,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="292" width="40" height="60"/>
+                                    <rect key="frame" x="160" y="313" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcI-l8-opo"/>
@@ -456,7 +447,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="292" width="40" height="60"/>
+                                    <rect key="frame" x="208" y="313" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xtj-Ot-XYW"/>
@@ -470,7 +461,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="292" width="40" height="60"/>
+                                    <rect key="frame" x="256" y="313" width="40" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuF-Dn-d7B"/>
@@ -483,16 +474,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="371" width="280" height="30"/>
+                                    <rect key="frame" x="16" y="381" width="280" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="newGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rgr-c3-lfw"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IGW-ZU-PCv">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="18" y="455" width="284" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="eventChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lad-Pe-DJy"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EUY-sQ-MMK" secondAttribute="bottom" constant="20" id="6GF-8g-p2U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EUY-sQ-MMK" secondAttribute="bottom" constant="20" id="6GF-8g-p2U">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="EUY-sQ-MMK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Edh-AD-lbr"/>
                             <constraint firstItem="EUY-sQ-MMK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yxj-26-gof"/>
                         </constraints>
@@ -504,7 +506,6 @@
                                 <exclude reference="EUY-sQ-MMK"/>
                                 <exclude reference="Og8-hh-Gv7"/>
                                 <exclude reference="gRx-E2-EdT"/>
-                                <exclude reference="IGW-ZU-PCv"/>
                                 <exclude reference="kGz-CU-64A"/>
                                 <exclude reference="UuH-xA-SAM"/>
                                 <exclude reference="b8j-Y7-obm"/>
@@ -532,6 +533,7 @@
                                 <exclude reference="k2X-jd-ES1"/>
                                 <exclude reference="57D-A0-rGy"/>
                                 <exclude reference="53B-ZM-c24"/>
+                                <exclude reference="IGW-ZU-PCv"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Edh-AD-lbr"/>
@@ -547,7 +549,6 @@
                                 <include reference="EUY-sQ-MMK"/>
                                 <include reference="Og8-hh-Gv7"/>
                                 <include reference="gRx-E2-EdT"/>
-                                <include reference="IGW-ZU-PCv"/>
                                 <include reference="kGz-CU-64A"/>
                                 <include reference="UuH-xA-SAM"/>
                                 <include reference="b8j-Y7-obm"/>
@@ -575,6 +576,7 @@
                                 <include reference="k2X-jd-ES1"/>
                                 <include reference="57D-A0-rGy"/>
                                 <include reference="53B-ZM-c24"/>
+                                <include reference="IGW-ZU-PCv"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Edh-AD-lbr"/>
@@ -583,6 +585,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="1AF-HR-XEZ">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="1wl-iZ-HFJ">
+                            <connections>
+                                <segue destination="lhi-4k-P4V" kind="show" id="b40-KK-eMR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventsLabel" destination="gRx-E2-EdT" id="mIP-WX-dyo"/>
                         <outlet property="eventsSlider" destination="IGW-ZU-PCv" id="896-Wa-a61"/>
@@ -627,9 +636,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1396.5" y="-223"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nln-vd-bar">
+            <objects>
+                <viewController id="lhi-4k-P4V" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rlK-co-UWc"/>
+                        <viewControllerLayoutGuide type="bottom" id="t3U-BE-sAy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pHQ-2c-58l">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37v-kl-PtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RVW-HB-NLK">
+            <objects>
+                <viewController id="zuP-3I-nvR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3oe-s3-E88"/>
+                        <viewControllerLayoutGuide type="bottom" id="qNz-AX-wz4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CML-vg-bVq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gJD-XW-eKW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="x5g-E1-fwV">
+                            <connections>
+                                <segue destination="lhi-4k-P4V" kind="show" id="gtY-t8-3Ho"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52Y-35-f6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386" y="572"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1nc-LO-fhU">
+            <objects>
+                <tabBarController id="YD0-dA-Ov6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qaz-7P-xDG"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JMM-yu-1ar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="28j-VJ-n0s" kind="relationship" relationship="viewControllers" id="bDg-a2-zFI"/>
+                        <segue destination="No5-E7-Bf8" kind="relationship" relationship="viewControllers" id="Zly-Ln-qx8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eU6-es-sTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364.5" y="171"/>
+        </scene>
+        <!--SetsGame-->
+        <scene sceneID="V4r-27-25P">
+            <objects>
+                <navigationController title="SetsGame" automaticallyAdjustsScrollViewInsets="NO" id="No5-E7-Bf8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sets" id="S3S-oB-oRf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kmn-MA-sCh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zuP-3I-nvR" kind="relationship" relationship="rootViewController" id="kQq-a4-wLn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taX-ol-q9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="572"/>
+        </scene>
+        <!--CardsGame-->
+        <scene sceneID="qcY-pR-vPz">
+            <objects>
+                <navigationController title="CardsGame" automaticallyAdjustsScrollViewInsets="NO" id="28j-VJ-n0s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cards" id="ucp-Np-qYy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="amf-dh-P64">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pg1-Ar-eWg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Eg-Ph-h9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478.5" y="-223"/>
         </scene>
     </scenes>
     <resources>
         <image name="cardBack" width="64" height="96"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gtY-t8-3Ho"/>
+    </inferredMetricsTieBreakers>
 </document>
